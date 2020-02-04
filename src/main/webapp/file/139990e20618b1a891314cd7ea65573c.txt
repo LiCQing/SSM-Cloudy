@@ -1,0 +1,264 @@
+PCI\VEN_8086&DEV_9C94&SUBSYS_192D1043&REV_E3\3&11583659&1&E2
+    Name: Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #3 - 9C94
+    Driver is running.
+SCSI\DISK&VEN_TOSHIB_&PROD_MQ01ABF050\4&1803705D&0&000000
+    Name: TOSHIBA MQ01ABF050
+    Driver is running.
+PCI\VEN_8086&DEV_1603&SUBSYS_192D1043&REV_09\3&11583659&1&20
+    Name: Intel(R) Dynamic Platform and Thermal Framework Processor Participant
+    Driver is running.
+ACPI\PNP0C02\1
+    Name:     Device is currently stopped.
+ACPI\PNP0C02\2
+    Name:     Device is currently stopped.
+ACPI\PNP0C02\4
+    Name:     Device is currently stopped.
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_61_-_INTEL(R)_CORE(TM)_I5-5200U_CPU_@_2.20GHZ\_1
+    Name: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+    Driver is running.
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_61_-_INTEL(R)_CORE(TM)_I5-5200U_CPU_@_2.20GHZ\_2
+    Name: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+    Driver is running.
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_61_-_INTEL(R)_CORE(TM)_I5-5200U_CPU_@_2.20GHZ\_3
+    Name: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+    Driver is running.
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_61_-_INTEL(R)_CORE(TM)_I5-5200U_CPU_@_2.20GHZ\_4
+    Name: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+    Driver is running.
+ACPI\PNP0C0A\0
+    Name: Microsoft ACPI     Driver is running.
+ACPI\PNP0C0B\0
+    Name: ACPI     Driver is running.
+ACPI\PNP0C0B\1
+    Name: ACPI     Driver is running.
+ACPI\PNP0C0B\2
+    Name: ACPI     Driver is running.
+ACPI\PNP0C0B\3
+    Name: ACPI     Driver is running.
+ACPI\PNP0C0B\4
+    Name: ACPI     Driver is running.
+PCI\VEN_1002&DEV_6665&SUBSYS_192D1043&REV_83\4&14AF2020&0&00E4
+    Name: AMD Radeon (TM) R5 M320
+    Driver is running.
+ACPI\ACPI000C\2&DABA3FF&1
+    Name: ACPI     Driver is running.
+SWD\PRINTENUM\PRINTQUEUES
+    Name:     Driver is running.
+ROOT\VOLMGR\0000
+    Name:     Driver is running.
+{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\VWIFIMP_WFD\5&357AE3AD&0&11
+    Name: Microsoft Wi-Fi Direct Virtual Adapter
+    Driver is running.
+ACPI\INT3400\2&DABA3FF&1
+    Name: Intel(R) Dynamic Platform and Thermal Framework Manager
+    Driver is running.
+STORAGE\VOLUME\{2CDCCA57-F656-11E5-95A8-806E6F6E6963}#0000000011500000
+    Name:     Driver is running.
+ROOT\BASICDISPLAY\0000
+    Name: Microsoft     Driver is running.
+ACPI\THERMALZONE\THRM
+    Name: ACPI     Driver is running.
+ACPI\PNP0C0E\2&DABA3FF&1
+    Name: ACPI     Driver is running.
+SWD\IP_TUNNEL_VBUS\IP_TUNNEL_DEVICE_ROOT
+    Name: Microsoft IPv4 IPv6     Driver is running.
+ACPI\THERMALZONE\TZ00
+    Name: ACPI     Driver is running.
+ACPI\THERMALZONE\TZ01
+    Name: ACPI     Driver is running.
+BTH\MS_BTHLE\6&26F72F28&1&0
+    Name: Microsoft Bluetooth LE     Driver is running.
+PCI\VEN_8086&DEV_9CA0&SUBSYS_192D1043&REV_03\3&11583659&1&D8
+    Name: High Definition Audio     Driver is running.
+ACPI\PNP0B00\4&212B126C&0
+    Name:     Driver is running.
+HID\ATK4002\3&2F32B022&0&0000
+    Name:     Driver is running.
+ACPI\PNP0103\0
+    Name:     Device is currently stopped.
+STORAGE\VOLUME\{2CDCCA57-F656-11E5-95A8-806E6F6E6963}#0000002E74600000
+    Name:     Driver is running.
+ROOT\COMPOSITEBUS\0000
+    Name:     Driver is running.
+PCI\VEN_8086&DEV_9C96&SUBSYS_192D1043&REV_E3\3&11583659&1&E3
+    Name: Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #4 - 9C96
+    Driver is running.
+ROOT\VDRVROOT\0000
+    Name: Microsoft     Driver is running.
+ACPI\PNP0000\4&212B126C&0
+    Name:     Device is currently stopped.
+SWD\PRINTENUM\{27E55FDE-5AE3-40C6-93CC-B53EAA573F84}
+    Name: Microsoft Print to PDF
+    Driver is running.
+SWD\IP_TUNNEL_VBUS\ISATAP_0
+    Name: Microsoft ISATAP Adapter
+    Driver is running.
+ROOT\SPACEPORT\0000
+    Name: Microsoft     Driver is running.
+USB\VID_04F2&PID_B483&MI_00\6&1A06C894&0&0000
+    Name: USB2.0 VGA UVC WebCam
+    Driver is running.
+STORAGE\VOLUME\{2CDCCA57-F656-11E5-95A8-806E6F6E6963}#0000000010500000
+    Name:     Driver is running.
+USB\ROOT_HUB30\4&170F320A&0&0
+    Name: USB     Driver is running.
+PCI\VEN_168C&DEV_0036&SUBSYS_213A1A3B&REV_01\4&24468080&0&00E3
+    Name: Qualcomm Atheros AR956x Wireless Network Adapter
+    Driver is running.
+STORAGE\VOLUME\{2CDCCA57-F656-11E5-95A8-806E6F6E6963}#0000000000100000
+    Name:     Driver is running.
+ROOT\KDNIC\0000
+    Name: Microsoft Kernel Debug Network Adapter
+    Driver is running.
+PCI\VEN_8086&DEV_1616&SUBSYS_192D1043&REV_09\3&11583659&1&10
+    Name: Intel(R) HD Graphics 5500
+    Driver is running.
+ACPI\INT3F0D\4&212B126C&0
+    Name:     Device is currently stopped.
+SWD\MMDEVAPI\{0.0.1.00000000}.{3DC210AE-1E7D-49A5-8F81-37CCAD27E9FF}
+    Name:     Driver is running.
+ACPI\ACPI0003\3&11583659&1
+    Name: Microsoft AC     Driver is running.
+PCI\VEN_8086&DEV_9CBA&SUBSYS_192D1043&REV_03\3&11583659&1&B0
+    Name: Intel(R) Management Engine Interface 
+    Driver is running.
+ACPI\PNP0C0D\2&DABA3FF&1
+    Name: ACPI     Driver is running.
+ACPI\PNP0200\4&212B126C&0
+    Name:     Device is currently stopped.
+PCI\VEN_8086&DEV_9C83&SUBSYS_192D1043&REV_03\3&11583659&1&FA
+    Name: Intel(R) 9 Series Chipset Family SATA AHCI Controller
+    Driver is running.
+ROOT\UMBUS\0000
+    Name: UMBus Root Bus Enumerator
+    Driver is running.
+PCI\VEN_10EC&DEV_8168&SUBSYS_200F1043&REV_10\21600813684CE00000
+    Name: Realtek PCIe GBE Family Controller
+    Driver is running.
+SWD\RADIO\{F7834121-5DB0-47AA-8322-CAF7AFD9787D}
+    Name: WLAN
+    Driver is running.
+SWD\RADIO\{3DB5895D-CC28-44B3-AD3D-6F01A782B8D2}
+    Name: Microsoft Radio Device Enumeration Bus
+    Driver is running.
+SWD\MSDAS\{CE958E9A-424F-4C88-86F4-11314821E75A}
+    Name: Microsoft Device Association Root Enumerator
+    Driver is running.
+PCI\VEN_8086&DEV_9CA2&SUBSYS_192D1043&REV_03\3&11583659&1&FB
+    Name: Mobile 5th Generation Intel(R) Core(TM) SMBus Controller - 9CA2
+    Device is currently stopped.
+PCI\VEN_8086&DEV_9C90&SUBSYS_192D1043&REV_E3\3&11583659&1&E0
+    Name: Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #1 - 9C90
+    Driver is running.
+ROOT\ACPI_HAL\0000
+    Name:     Driver is running.
+ACPI\ATK4002\2&DABA3FF&1
+    Name: ASUS Wireless Radio Control
+    Driver is running.
+ACPI\PNP0C14\ATK
+    Name: Microsoft Windows Management Interface for ACPI
+    Driver is running.
+ACPI\PNP0A08\0
+    Name: PCI Express     Driver is running.
+HDAUDIO\FUNC_01&VEN_10EC&DEV_0233&SUBSYS_1043192D&REV_1000\4&3B6EC42E&0&0001
+    Name: Realtek High Definition Audio
+    Driver is running.
+PCI\VEN_8086&DEV_9C98&SUBSYS_192D1043&REV_E3\3&11583659&1&E4
+    Name: Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #5 - 9C98
+    Driver is running.
+BTH\MS_BTHBRB\6&26F72F28&1&1
+    Name: Microsoft Bluetooth Enumerator
+    Driver is running.
+ACPI_HAL\PNP0C08\0
+    Name: Microsoft ACPI-Compliant System
+    Driver is running.
+HTREE\ROOT\0
+    Driver is running.
+ROOT\BASICRENDER\0000
+    Name: Microsoft     Driver is running.
+DISPLAY\AUO38ED\4&37E8F88E&0&UID265988
+    Name:     Driver is running.
+ACPI_HAL\UEFI\0
+    Name: Microsoft UEFI     Driver is running.
+SWD\PRINTENUM\{F2E8930A-8566-4DF0-86FE-4826464F004A}
+    Name: Microsoft XPS Document Writer
+    Driver is running.
+BTH\MS_RFCOMM\6&26F72F28&1&0
+    Name: Bluetooth Device (RFCOMM Protocol TDI)
+    Driver is running.
+BTH\MS_BTHPAN\6&26F72F28&1&2
+    Name: Bluetooth Device (Personal Area Network)
+    Driver is running.
+SWD\PRINTENUM\{A4095050-B05F-4DFC-BA6E-120575814DBB}
+    Name: Foxit PhantomPDF Printer
+    Driver is running.
+ACPI\FIXEDBUTTON\2&DABA3FF&1
+    Name: ACPI     Driver is running.
+PCI\VEN_8086&DEV_1604&SUBSYS_192D1043&REV_09\3&11583659&1&00
+    Name: PCI     Driver is running.
+ACPI\PNP0C02\13
+    Name:     Device is currently stopped.
+SWD\RADIO\BLUETOOTH_7AACDD89A580
+    Name: Bluetooth
+    Driver is running.
+USB\VID_13D3&PID_3423\5&C4D250D&0&6
+    Name: Qualcomm Atheros Bluetooth 4.0
+    Driver is running.
+ACPI\INT340F\2&DABA3FF&1
+    Name: Intel Collaborative Processor Performance Control (CPPC) Driver
+    Driver is running.
+ACPI\INT0800\4&212B126C&0
+    Name:     Device is currently stopped.
+USB\VID_04F2&PID_B483\5&C4D250D&0&5
+    Name: USB Composite Device
+    Driver is running.
+PCI\VEN_8086&DEV_9CA4&SUBSYS_192D1043&REV_03\3&11583659&1&FE
+    Name: Intel(R) Dynamic Platform and Thermal Framework Chipset Participant
+    Driver is running.
+SWD\MMDEVAPI\MICROSOFTGSWAVETABLESYNTH
+    Name: Microsoft GS     Driver is running.
+SWD\SCDEVICEENUMBUS\0
+    Name: Smart Card Device Enumeration Bus
+    Driver is running.
+SWD\SCDEVICEENUMBUS\1
+    Name: Microsoft Passport Container Enumeration Bus
+    Driver is running.
+SWD\MMDEVAPI\{0.0.0.00000000}.{F42B44D0-0468-4D55-B63D-7E5B5861CC16}
+    Name:     Driver is running.
+ROOT\NDISVIRTUALBUS\0000
+    Name: NDIS     Driver is running.
+USB\VID_0BDA&PID_0129\20100201396000000
+    Name: Realtek USB 2.0 Card Reader
+    Driver is running.
+UEFI\RES_{56AD46F7-5295-55E8-9941-9C174340F4CB}\0
+    Name:     Driver is running.
+ACPI\PNP0C09\4&212B126C&0
+    Name: Microsoft ACPI     Driver is running.
+ACPI\PNP0100\4&212B126C&0
+    Name:     Device is currently stopped.
+SWD\PRINTENUM\{3E5F7E5F-6608-43B9-AF07-5B4FC82227E5}
+    Name: Fax
+    Driver is running.
+ACPI\ETD0108\4&212B126C&0
+    Name: ASUS Touchpad
+    Driver is running.
+ACPI\ATK3001\4&212B126C&0
+    Name: PC/AT     Driver is running.
+PCI\VEN_8086&DEV_9CB1&SUBSYS_201F1043&REV_03\3&11583659&1&A0
+    Name: Intel(R) USB 3.0     Driver is running.
+ROOT\MSSMBIOS\0000
+    Name: Microsoft System Management BIOS Driver
+    Driver is running.
+ACPI\INT340E\2&DABA3FF&1
+    Name:     Device is currently stopped.
+PCI\VEN_8086&DEV_9CC3&SUBSYS_192D1043&REV_03\3&11583659&1&F8
+    Name: Mobile 5th Generation Intel(R) Core(TM) Premium SKU LPC Controller - 9CC3
+    Driver is running.
+ROOT\SYSTEM\0000
+    Name:     Driver is running.
+STORAGE\VOLUME\{2CDCCA57-F656-11E5-95A8-806E6F6E6963}#0000002E93900000
+    Name:     Driver is running.
+ROOT\RDPBUS\0000
+    Name: Remote Desktop Device Redirector Bus
+    Driver is running.
+107 matching device(s) found.

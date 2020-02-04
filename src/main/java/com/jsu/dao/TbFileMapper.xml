@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jsu.dao.TbFileMapper" >
+  <resultMap id="BaseResultMap" type="com.jsu.pojo.TbFile" >
+    <id column="f_id" property="fId" jdbcType="INTEGER" />
+    <result column="f_name" property="fName" jdbcType="VARCHAR" />
+    <result column="f_size" property="fSize" jdbcType="BIGINT" />
+    <result column="f_create_time" property="fCreateTime" jdbcType="TIMESTAMP" />
+    <result column="f_cate" property="fCate" jdbcType="INTEGER" />
+    <result column="f_delete_time" property="fDeleteTime" jdbcType="TIMESTAMP" />
+    <result column="f_status" property="fStatus" jdbcType="INTEGER" />
+    <result column="is_dir" property="isDir" jdbcType="INTEGER" />
+    <result column="p_id" property="pId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="m_id" property="mId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    f_id, f_name, f_size, f_create_time, f_cate, f_delete_time, f_status, is_dir, p_id, 
+    u_id, m_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.jsu.pojo.TbFileExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_file
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+ <!--  select from tb_file where u_id = #{uId,jdbcType=INTEGER} -->
+ <!--  SELECT * FROM tb_file where u_id = #{uId,jdbcType=INTEGER} and p_id= #{pId,jdbcType=INTEGER -->
+  SELECT * FROM tb_file WHERE u_id=#{0} and p_id=#{1} and f_status = 0  order by is_dir desc
+  
+  </select>
+  <select id="selectByFid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  SELECT * FROM tb_file where p_id = #{fId,jdbcType=INTEGER}
+  </select>
+   <select id="selectByPid" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  SELECT * FROM tb_file where p_id = #{pId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPidName" resultMap="BaseResultMap" >
+  SELECT * FROM tb_file where p_id=#{0} and f_name=#{1}
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+     <include refid="Base_Column_List" /> 
+    from tb_file
+    where f_id = #{fId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_file
+    where f_id = #{fId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jsu.pojo.TbFileExample" >
+    delete from tb_file
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jsu.pojo.TbFile" >
+    insert into tb_file (f_id, f_name, f_size, 
+      f_create_time, f_cate, f_delete_time, 
+      f_status, is_dir, p_id, 
+      u_id, m_id)
+    values (#{fId,jdbcType=INTEGER}, #{fName,jdbcType=VARCHAR}, #{fSize,jdbcType=BIGINT}, 
+      #{fCreateTime,jdbcType=TIMESTAMP}, #{fCate,jdbcType=INTEGER}, #{fDeleteTime,jdbcType=TIMESTAMP}, 
+      #{fStatus,jdbcType=INTEGER}, #{isDir,jdbcType=INTEGER}, #{pId,jdbcType=INTEGER}, 
+      #{uId,jdbcType=INTEGER}, #{mId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jsu.pojo.TbFile" useGeneratedKeys="true" keyProperty="fId">
+    insert into tb_file
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fId != null" >
+        f_id,
+      </if>
+      <if test="fName != null" >
+        f_name,
+      </if>
+      <if test="fSize != null" >
+        f_size,
+      </if>
+      <if test="fCreateTime != null" >
+        f_create_time,
+      </if>
+      <if test="fCate != null" >
+        f_cate,
+      </if>
+      <if test="fDeleteTime != null" >
+        f_delete_time,
+      </if>
+      <if test="fStatus != null" >
+        f_status,
+      </if>
+      <if test="isDir != null" >
+        is_dir,
+      </if>
+      <if test="pId != null" >
+        p_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="mId != null" >
+        m_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fId != null" >
+        #{fId,jdbcType=INTEGER},
+      </if>
+      <if test="fName != null" >
+        #{fName,jdbcType=VARCHAR},
+      </if>
+      <if test="fSize != null" >
+        #{fSize,jdbcType=BIGINT},
+      </if>
+      <if test="fCreateTime != null" >
+        #{fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fCate != null" >
+        #{fCate,jdbcType=INTEGER},
+      </if>
+      <if test="fDeleteTime != null" >
+        #{fDeleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fStatus != null" >
+        #{fStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isDir != null" >
+        #{isDir,jdbcType=INTEGER},
+      </if>
+      <if test="pId != null" >
+        #{pId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="mId != null" >
+        #{mId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jsu.pojo.TbFileExample" resultType="java.lang.Integer" >
+    select count(*) from tb_file
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tb_file
+    <set >
+      <if test="record.fId != null" >
+        f_id = #{record.fId,jdbcType=INTEGER},
+      </if>
+      <if test="record.fName != null" >
+        f_name = #{record.fName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fSize != null" >
+        f_size = #{record.fSize,jdbcType=BIGINT},
+      </if>
+      <if test="record.fCreateTime != null" >
+        f_create_time = #{record.fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.fCate != null" >
+        f_cate = #{record.fCate,jdbcType=INTEGER},
+      </if>
+      <if test="record.fDeleteTime != null" >
+        f_delete_time = #{record.fDeleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.fStatus != null" >
+        f_status = #{record.fStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.isDir != null" >
+        is_dir = #{record.isDir,jdbcType=INTEGER},
+      </if>
+      <if test="record.pId != null" >
+        p_id = #{record.pId,jdbcType=INTEGER},
+      </if>
+      <if test="record.uId != null" >
+        u_id = #{record.uId,jdbcType=INTEGER},
+      </if>
+      <if test="record.mId != null" >
+        m_id = #{record.mId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tb_file
+    set f_id = #{record.fId,jdbcType=INTEGER},
+      f_name = #{record.fName,jdbcType=VARCHAR},
+      f_size = #{record.fSize,jdbcType=BIGINT},
+      f_create_time = #{record.fCreateTime,jdbcType=TIMESTAMP},
+      f_cate = #{record.fCate,jdbcType=INTEGER},
+      f_delete_time = #{record.fDeleteTime,jdbcType=TIMESTAMP},
+      f_status = #{record.fStatus,jdbcType=INTEGER},
+      is_dir = #{record.isDir,jdbcType=INTEGER},
+      p_id = #{record.pId,jdbcType=INTEGER},
+      u_id = #{record.uId,jdbcType=INTEGER},
+      m_id = #{record.mId,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jsu.pojo.TbFile" >
+    update tb_file
+    <set >
+      <if test="fName != null" >
+        f_name = #{fName,jdbcType=VARCHAR},
+      </if>
+      <if test="fSize != null" >
+        f_size = #{fSize,jdbcType=BIGINT},
+      </if>
+      <if test="fCreateTime != null" >
+        f_create_time = #{fCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fCate != null" >
+        f_cate = #{fCate,jdbcType=INTEGER},
+      </if>
+      <if test="fDeleteTime != null" >
+        f_delete_time = #{fDeleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fStatus != null" >
+        f_status = #{fStatus,jdbcType=INTEGER},
+      </if>
+      <if test="isDir != null" >
+        is_dir = #{isDir,jdbcType=INTEGER},
+      </if>
+      <if test="pId != null" >
+        p_id = #{pId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="mId != null" >
+        m_id = #{mId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where f_id = #{fId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jsu.pojo.TbFile" >
+    update tb_file
+    set f_name = #{fName,jdbcType=VARCHAR},
+      f_size = #{fSize,jdbcType=BIGINT},
+      f_create_time = #{fCreateTime,jdbcType=TIMESTAMP},
+      f_cate = #{fCate,jdbcType=INTEGER},
+      f_delete_time = #{fDeleteTime,jdbcType=TIMESTAMP},
+      f_status = #{fStatus,jdbcType=INTEGER},
+      is_dir = #{isDir,jdbcType=INTEGER},
+      p_id = #{pId,jdbcType=INTEGER},
+      u_id = #{uId,jdbcType=INTEGER},
+      m_id = #{mId,jdbcType=INTEGER}
+    where f_id = #{fId,jdbcType=INTEGER}
+  </update>
+  
+ <update id="updateAuditMember" parameterType="java.util.List" >
+        UPDATE tb_file SET
+        f_status =0
+        WHERE f_id in
+        <foreach collection="list" open="(" close=")" item="fid" separator=",">
+            #{fid}
+        </foreach>
+    </update>
+ 
+</mapper>

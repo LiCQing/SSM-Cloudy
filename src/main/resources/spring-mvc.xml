@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+	<!-- 注解扫描 -->
+ 	<context:component-scan base-package="com.jsu" />
+	<mvc:annotation-driven />
+	
+	<!-- 数据库连接池 -->
+	<!-- 加载配置文件 -->
+<context:property-placeholder location="classpath:resource/*.properties" ignore-unresolvable="true" />
+	<!-- 数据库连接池 -->
+	<bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource"
+		destroy-method="close">
+		<property value="${jdbc.url}" name="url" />
+		<property value="${jdbc.username}" name="username" />
+		<property value="${jdbc.password}" name="password" />
+		<property value="${jdbc.driver}" name="driverClassName" />
+		<property value="10" name="maxActive" />
+		<property value="5" name="minIdle" />
+	</bean>
+	<!-- 配置sqlsessionFactory -->
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+		<property value="classpath:mybatis/SqlMapConfig.xml" name="configLocation" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:com/jsu/dao/*.xml"/>
+	</bean>
+	<!-- 配置扫描包，加载mapper代理对象 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property value="com.jsu.dao" name="basePackage" />
+	</bean>
+	
+	<mvc:resources location="/file/" mapping="/file/**" />
+ 	
+	<!-- 定义文件上传解析器 -->
+	<bean id="multipartResolver"  
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+        <!-- set the max upload size100MB -->  
+        <property name="maxUploadSize">  
+            <value>104857600</value>  
+        </property>  
+        <property name="maxInMemorySize">  
+            <value>4096</value>  
+        </property>  
+    </bean>  
+	 
+ 
+</beans>
